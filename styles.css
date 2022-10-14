@@ -42,7 +42,7 @@ button {
 }
 .page {
   display: grid;
-  grid-template-columns: 25% 75%;
+  grid-template-columns: 20% 75%;
 }
 aside {
   background-color: var(--color-8);
@@ -51,21 +51,22 @@ aside {
   padding: 40px 0;
 }
 .logo {
-  height: 70px;
+  height: 50px;
   margin: 0px auto;
   margin-bottom: 50px;
-
-  display: flex;
 }
 .sidebar-links {
-  padding: 0 40px;
+  padding: 0 25px;
 }
 .sidebar-link {
-  margin: 30px 0;
+  font-size: 0.9rem;
   color: var(--color-1);
+  padding: 10px 7px;
+  border-radius: 5px;
+  position: relative;
 }
 .sidebar-link i {
-  margin-right: 15px;
+  margin-right: 10px;
 }
 
 .img-container {
@@ -82,6 +83,7 @@ aside {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 30px;
 }
 .input-container {
   background-color: var(--color-1);
@@ -105,55 +107,80 @@ aside {
   color: var(--color-7);
 }
 
+.active-sidelink {
+  background-color: var(--color-1);
+  color: #000;
+}
+.active-sidelink::before {
+  content: "";
+  height: 100%;
+  width: 2px;
+  position: absolute;
+  left: -10px;
+  top: 0;
+  border-radius: 5px;
+  background-color: var(--color-1);
+}
 .dashboard-container {
-  padding: 45px 40px;
+  padding: 20px 40px;
 }
 .setup-container {
-  background-color: var(--color-8);
-  border-radius: 15px;
-  padding: 25px 20px;
-  color: var(--color-1);
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px 20px;
+
+  color: var(--color-8);
 }
 .setup-container h3 {
   margin: 0;
+  font-size: 0.8rem;
 }
 .setup-process {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 85%;
-  background-color: rgba(248, 253, 249, 0.5);
-  margin-top: 30px;
-  padding: 20px 25px;
-  border-radius: 10px;
+  width: 100%;
+  column-gap: 5px;
+  background: linear-gradient(
+    90deg,
+    rgba(54, 62, 122, 0.9),
+    rgba(29, 33, 65, 1)
+  );
+  margin-top: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
 }
 .setup-process .process i {
-  margin-right: 10px;
-  color: var(--color-8);
+  margin-right: 5px;
+  color: rgba(29, 33, 65, 1);
 }
 .setup-process svg {
-  width: 50px;
+  width: 70px;
 }
 .process {
-  font-size: 0.9rem;
+  font-size: 0.5rem;
+  width: 100%;
   color: var(--color-1);
   font-weight: 300;
+  display: flex;
+  align-items: center;
+}
+.setup-container p {
+  font-size: 0.75rem;
+  font-weight: 300;
+  margin: 5px 0;
+  color: var(--color-8);
 }
 .process:last-child i {
   color: var(--color-1);
 }
 .dashboard-container h1 {
+  font-size: 1.3rem;
   font-weight: 400;
   color: var(--color-7);
-  margin: 40px 0;
-  z-index: 1;
-}
-.setup-container p {
-  font-size: 0.8rem;
-  font-weight: 300;
   margin: 10px 0;
 }
-.setup-container {
+/* .setup-container {
   position: relative;
   overflow: hidden;
 }
@@ -176,8 +203,8 @@ aside {
   position: absolute;
   top: -90px;
   left: 70px;
-}
-.pattern {
+} */
+/* .pattern {
   width: 100px;
   height: 100px;
   position: absolute;
@@ -212,7 +239,7 @@ aside {
   top: -50%;
   position: absolute;
   background-color: var(--color-8);
-}
+} */
 /* 
 .pattern-3 {
   top: 5px;
@@ -231,8 +258,14 @@ aside {
 } */
 .dashboard-container h2 {
   font-weight: 400;
-  margin: 50px 0;
+  margin: 30px 0;
+  font-size: 1rem;
   color: var(--color-7);
+}
+.dashboard-content {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 30px;
 }
 .wallet-container {
   display: grid;
@@ -245,39 +278,43 @@ aside {
   position: relative;
   border-radius: 10px;
   width: 100%;
-  height: 250px;
+  height: 150px;
   color: var(--color-7);
+  min-width: 100px;
 }
 .top {
   display: flex;
   align-items: center;
   justify-content: center;
-  column-gap: 10px;
+  column-gap: 5px;
+  width: 100%;
 }
 .top .img-container {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
 }
 .top h4 {
-  font-size: 0.9rem;
+  font-size: 0.5rem;
 }
 .bottom {
   position: absolute;
-  bottom: 0px;
+  bottom: 10px;
 }
 .wallet p {
-  font-size: 2rem;
-  font-weight: 600;
-  margin: 5px 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0px 0;
 }
+
 .wallet h5 {
   margin: 0;
-  font-weight: 400;
+  font-size: 0.6rem;
+  font-weight: 500;
 }
 .wallet:last-child img {
   position: absolute;
   right: 5px;
-  top: 60px;
+  bottom: 5px;
   width: 50px;
 }
 .wallet:last-child {
@@ -287,15 +324,24 @@ aside {
 }
 .wallet:last-child h3 {
   font-weight: 400;
+  font-size: 0.8rem;
   text-transform: capitalize;
+}
+.chat-img {
+  position: absolute;
+  right: 10px;
+  bottom: 0px;
+  width: 70px;
 }
 .title {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 30px 0;
+  margin: 20px 0;
+  margin-bottom: 5px;
 }
 .title h3 {
+  font-size: 0.95rem;
   font-weight: 400;
 }
 .select {
@@ -310,29 +356,36 @@ select {
   border-radius: 5px;
 }
 
-th {
+.activity-container th {
   font-weight: 300;
+  font-size: 0.9rem;
   text-align: start;
   padding-bottom: 20px;
 }
-tr:first-child i {
+.activity-container tr:first-child i {
   color: var(--color-10);
 }
-tr i {
+.activity-container tr i {
   color: var(--color-9);
   margin-right: 10px;
 }
 
-table {
+.activity-container table {
   width: 100%;
   border-collapse: collapse;
 }
-td {
-  width: 20%;
-  padding: 10px 5px;
-  padding-top: 20px;
-  border-bottom: 2px solid var(--color-1);
+.activity-container td {
+  padding: 10px 0;
   font-weight: 300;
+  font-size: 0.85rem;
+  height: 80px;
+}
+.activity-container tr {
+  border-bottom: 2px solid var(--color-1);
+}
+.activity-container tr td .img-container {
+  width: 30px;
+  height: 30px;
 }
 tr td:last-child,
 thead th:last-child {
@@ -342,29 +395,41 @@ thead th:last-child {
   background: var(--linear-gradient);
   border-radius: 5px;
   padding: 10px 5px;
-  margin: 40px auto;
-  display: flex;
+  margin: 20px 0;
   border: 0;
   color: #fff;
   font-weight: 300;
   text-transform: capitalize;
   width: 100px;
-
-  justify-content: center;
 }
 .chart-container tr td:first-child {
   display: flex;
   align-items: center;
   justify-content: center;
   column-gap: 10px;
-  width: 80%;
+  width: 100%;
 }
-
+.chart-container td:last-child img {
+  width: 150px;
+}
 .chart-container thead {
   background: var(--linear-gradient);
 }
 .chart-container th {
-  padding: 12px 5px;
+  padding: 12px 10px;
   text-align: left;
   color: var(--color-1);
+}
+.chart-container th:first-child {
+  border-radius: 5px 0 0 5px;
+}
+.chart-container th:last-child {
+  border-radius: 0 5px 5px 0;
+}
+.chart-container tr:first-child td:nth-child(3) {
+  color: var(--color-9);
+}
+.setup-container .activity-container td {
+  padding: 0;
+  height: 50px;
 }
