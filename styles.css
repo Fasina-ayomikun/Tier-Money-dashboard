@@ -11,6 +11,9 @@
   --color-8: #363e7a;
   --color-9: #56d3a2;
   --color-10: #d35683;
+  --orange: #feb140;
+  --purple: #df99d7;
+  --light-blue: #aba4f1;
   --linear-gradient: linear-gradient(
     268.85deg,
     rgba(10, 0, 72, 0.8) -3.63%,
@@ -31,18 +34,22 @@ ul {
   list-style: none;
   padding: 0;
 }
+a {
+  text-decoration: none;
+}
 img {
   object-fit: cover;
   display: block;
 }
 input,
-button {
+button,
+select {
   outline: none;
   cursor: pointer;
 }
 .page {
   display: grid;
-  grid-template-columns: 20% 75%;
+  grid-template-columns: 25% 75%;
 }
 aside {
   background-color: var(--color-8);
@@ -64,6 +71,9 @@ aside {
   padding: 10px 7px;
   border-radius: 5px;
   position: relative;
+}
+.sidebar-link a {
+  color: var(--color-1);
 }
 .sidebar-link i {
   margin-right: 10px;
@@ -111,7 +121,10 @@ aside {
   background-color: var(--color-1);
   color: #000;
 }
-.active-sidelink::before {
+.active-sidelink a {
+  color: #000;
+}
+.active-sidelink a::before {
   content: "";
   height: 100%;
   width: 2px;
@@ -348,14 +361,19 @@ aside {
   display: flex;
   align-items: center;
   column-gap: 10px;
+  font-size: 0.8rem;
 }
 select {
   padding: 5px 5px;
+  font-size: 0.8rem;
   background-color: var(--color-3);
   border: 0;
   border-radius: 5px;
 }
 
+.curve-graph {
+  margin: 20px 0;
+}
 .activity-container th {
   font-weight: 300;
   font-size: 0.9rem;
@@ -368,6 +386,9 @@ select {
 .activity-container tr i {
   color: var(--color-9);
   margin-right: 10px;
+}
+.activity-container {
+  margin-top: 20px;
 }
 
 .activity-container table {
@@ -432,4 +453,15 @@ thead th:last-child {
 .setup-container .activity-container td {
   padding: 0;
   height: 50px;
+}
+@media (max-width: 1160px) {
+  .dashboard-content {
+    flex-wrap: wrap;
+  }
+  .setup-container {
+    width: 100%;
+  }
+  .sidebar-link a {
+    font-size: 0.8rem;
+  }
 }

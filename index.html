@@ -9,6 +9,8 @@
       src="https://kit.fontawesome.com/0f386651af.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <title>Tier Money</title>
   </head>
   <body>
@@ -17,10 +19,14 @@
         <img src="./images/logo.png" alt="Tier Money" class="logo" />
         <ul class="sidebar-links">
           <li class="sidebar-link active-sidelink">
-            <i class="fa-solid fa-house"></i>Dashboard
+            <a href="index.html">
+              <i class="fa-solid fa-house"></i>Dashboard
+            </a>
           </li>
           <li class="sidebar-link">
-            <i class="fa-solid fa-wallet"></i>Account
+            <a href="account.html">
+              <i class="fa-solid fa-wallet"></i>Account
+            </a>
           </li>
           <li class="sidebar-link">
             <i class="fa-regular fa-arrow-trend-up"></i>Transaction
@@ -54,6 +60,7 @@
           <div class="dashboard-content">
             <div>
               <h1>Welcome,<b>Ben!</b></h1>
+
               <!-- <div class="setup-container">
             <div class="pattern pattern-1"></div>
             <div class="pattern pattern-2"></div>
@@ -155,7 +162,9 @@
                   <h3>View All</h3>
                 </div>
               </div>
-
+              <div class="curve-graph">
+                <canvas id="myChart" width="400" height="400"></canvas>
+              </div>
               <div class="title">
                 <h3>Exchange Rate</h3>
               </div>
@@ -314,5 +323,7 @@
       </section>
       <img src="./images/chat.png" alt="" class="chat-img" />
     </section>
+
+    <script src="app.js"></script>
   </body>
 </html>

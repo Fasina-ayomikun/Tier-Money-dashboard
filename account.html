@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="account.css" />
+    <script
+      src="https://kit.fontawesome.com/0f386651af.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <title>Tier Money</title>
+  </head>
+  <body>
+    <section class="page">
+      <aside>
+        <img src="./images/logo.png" alt="Tier Money" class="logo" />
+        <ul class="sidebar-links">
+          <li class="sidebar-link">
+            <a href="index.html">
+              <i class="fa-solid fa-house"></i>Dashboard
+            </a>
+          </li>
+          <li class="sidebar-link">
+            <a href="account.html">
+              <i class="fa-solid fa-wallet"></i>Account
+            </a>
+          </li>
+          <li class="sidebar-link">
+            <i class="fa-regular fa-arrow-trend-up"></i>Transaction
+          </li>
+          <li class="sidebar-link">
+            <i class="fa-sharp fa-solid fa-align-left"></i>Beneficiaries
+          </li>
+          <li class="sidebar-link">
+            <i class="fa-sharp fa-solid fa-calculator"></i>Currency Exchange
+          </li>
+          <li class="sidebar-link"><i class="fa-solid fa-user"></i>Settings</li>
+          <li class="sidebar-link">
+            <i class="fa-solid fa-right-from-bracket"></i>Logout
+          </li>
+        </ul>
+      </aside>
+      <section class="dashboard-section">
+        <div class="dashboard-container">
+          <div class="input-section">
+            <div class="input-container">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="text" />
+            </div>
+            <div class="user-container">
+              <i class="fa-solid fa-bell"></i>
+              <div class="img-container">
+                <img src="./images/person.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="dashboard-content dashboard-account-content">
+            <div>
+              <div class="title">
+                <h1>Account</h1>
+                <ul class="account-title-container">
+                  <li class="account-title">
+                    <div class="img-container">
+                      <img src="./images/person.jpg" alt="" />
+                    </div>
+                    NGN
+                  </li>
+                  <li class="account-title">
+                    <div class="img-container">
+                      <img src="./images/person.jpg" alt="" />
+                    </div>
+                    Euro
+                  </li>
+                  <li class="account-title">
+                    <div class="img-container">
+                      <img src="./images/person.jpg" alt="" />
+                    </div>
+                    GBP
+                  </li>
+                  <li class="account-title">
+                    <div class="img-container">
+                      <img src="./images/person.jpg" alt="" />
+                    </div>
+                    USD
+                  </li>
+                  <li class="account-title">
+                    <div class="img-container">
+                      <img src="./images/person.jpg" alt="" />
+                    </div>
+                    YEN
+                  </li>
+
+                  <button class="account-btn">More Account</button>
+                </ul>
+              </div>
+
+              <div class="account-dashboard-container">
+                <div class="account-dashboard">
+                  <i class="fa-sharp fa-solid fa-copy copy"></i>
+                  <div class="balance">
+                    <p>NGN BALANCE</p>
+                    <h3>$50,000,000</h3>
+                  </div>
+                  <ul>
+                    <li>Account: Details</li>
+                    <li>Account: Details</li>
+                    <li>Account: Details</li>
+                    <li>Account: Details</li>
+                  </ul>
+                </div>
+                <div class="account-dashboard">
+                  <p>
+                    Send <br />
+                    money
+                  </p>
+                </div>
+                <div class="account-dashboard">
+                  <p>
+                    Fund Account<br />
+                    with card
+                  </p>
+                </div>
+                <div class="account-dashboard">
+                  <p>
+                    Exchange <br />
+                    Funds
+                  </p>
+                </div>
+              </div>
+              <!-- <div class="setup-container">
+            <div class="pattern pattern-1"></div>
+            <div class="pattern pattern-2"></div>
+            <h3>Finish your account setup (2/3)</h3>
+            <p>Document verification is still under process</p>
+            <ul class="setup-process">
+              <li class="process">
+                <i class="fa-solid fa-circle-check"></i>
+                Account Created
+              </li>
+              <svg
+                width="68"
+                height="16"
+                viewBox="0 0 68 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                >
+                <path
+                  d="M67.7071 8.70711C68.0976 8.31658 68.0976 7.68342 67.7071 7.29289L61.3431 0.928932C60.9526 0.538408 60.3195 0.538408 59.9289 0.928932C59.5384 1.31946 59.5384 1.95262 59.9289 2.34315L65.5858 8L59.9289 13.6569C59.5384 14.0474 59.5384 14.6805 59.9289 15.0711C60.3195 15.4616 60.9526 15.4616 61.3431 15.0711L67.7071 8.70711ZM0 9H67V7H0V9Z"
+                  fill="#ECF3FE"
+                />
+              </svg>
+              <li class="process">
+                <i class="fa-solid fa-circle-check"></i>
+                Identity Verification
+              </li>
+              <svg
+                width="68"
+                height="16"
+                viewBox="0 0 68 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                >
+              <path
+                  d="M67.7071 8.70711C68.0976 8.31658 68.0976 7.68342 67.7071 7.29289L61.3431 0.928932C60.9526 0.538408 60.3195 0.538408 59.9289 0.928932C59.5384 1.31946 59.5384 1.95262 59.9289 2.34315L65.5858 8L59.9289 13.6569C59.5384 14.0474 59.5384 14.6805 59.9289 15.0711C60.3195 15.4616 60.9526 15.4616 61.3431 15.0711L67.7071 8.70711ZM0 9H67V7H0V9Z"
+                  fill="#ECF3FE"
+                />
+              </svg>
+              <li class="process">
+                <i class="fa-solid fa-circle-check"></i>
+                Document Verification
+              </li>
+            </ul>
+          </div> -->
+              <div class="account-btns">
+                <button
+                  class="account-btn active-account-btn"
+                  id="account-btn1"
+                >
+                  Transaction
+                </button>
+                <button class="account-btn" id="account-btn2">Report</button>
+                <button class="account-btn" id="account-btn3">
+                  Statements of Account
+                </button>
+              </div>
+              <div class="account-infos">
+                <div class="account-info" id="account-btn1-content">
+                  <div class="title">
+                    <h3>Transaction</h3>
+                    <div class="input-container">
+                      <i class="fa-solid fa-magnifying-glass"></i>
+                      <input type="text" />
+                    </div>
+                    <div class="select">
+                      Sort by:
+                      <select name="date" id="transaction-date">
+                        <option value="transaction-date">
+                          Date <i class="fa-solid fa-chevron-down"></i>
+                        </option>
+                        <option value="transaction-date">
+                          Sep 13 <i class="fa-solid fa-chevron-down"></i>
+                        </option>
+                        <option value="transaction-date">
+                          Sep 13 <i class="fa-solid fa-chevron-down"></i>
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="activity-container">
+                    <table>
+                      <thead>
+                        <th>Name</th>
+                        <th>Date & Time</th>
+                        <th>Transaction</th>
+                        <th>Amount</th>
+                      </thead>
+                      <tr>
+                        <td>
+                          <i class="fa-solid fa-circle-arrow-down"></i>
+                          Ajani Ben Dara
+                        </td>
+                        <td>Sep 16, 2022. 12:30PM</td>
+                        <td>9874293456710972</td>
+                        <td>-$3000</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <i class="fa-solid fa-circle-arrow-down"></i>
+                          Ajani Ben Dara
+                        </td>
+                        <td>Sep 16, 2022. 12:30PM</td>
+                        <td>9874293456710972</td>
+                        <td>-$3000</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <i class="fa-solid fa-circle-arrow-down"></i>
+                          Ajani Ben Dara
+                        </td>
+                        <td>Sep 16, 2022. 12:30PM</td>
+                        <td>9874293456710972</td>
+                        <td>-$3000</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <i class="fa-solid fa-circle-arrow-down"></i>
+                          Ajani Ben Dara
+                        </td>
+                        <td>Sep 16, 2022. 12:30PM</td>
+                        <td>9874293456710972</td>
+                        <td>-$3000</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <i class="fa-solid fa-circle-arrow-down"></i>
+                          Ajani Ben Dara
+                        </td>
+                        <td>Sep 16, 2022. 12:30PM</td>
+                        <td>9874293456710972</td>
+                        <td>-$3000</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+                <div class="account-info" id="account-btn2-content">
+                  <div class="title">
+                    <h3>Transaction</h3>
+                    <div>
+                      <div class="select">
+                        Sort by:
+                        <select name="date" id="transaction-date">
+                          <option value="transaction-date">
+                            Date <i class="fa-solid fa-chevron-down"></i>
+                          </option>
+                          <option value="transaction-date">
+                            Sep 13 <i class="fa-solid fa-chevron-down"></i>
+                          </option>
+                          <option value="transaction-date">
+                            Sep 13 <i class="fa-solid fa-chevron-down"></i>
+                          </option>
+                        </select>
+                        <select name="date" id="transaction-date">
+                          <option value="transaction-date">
+                            Aug <i class="fa-solid fa-chevron-down"></i>
+                          </option>
+                          <option value="transaction-date">
+                            Sep 13 <i class="fa-solid fa-chevron-down"></i>
+                          </option>
+                          <option value="transaction-date">
+                            Sep 13 <i class="fa-solid fa-chevron-down"></i>
+                          </option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="curve-graph">
+                    <canvas id="myChart" width="400" height="400"></canvas>
+                  </div>
+                </div>
+                <div class="account-info" id="account-btn3-content">
+                  <form>
+                    <h4>Request for Statement of Account</h4>
+                    <label for="start-date">Start Date</label>
+                    <div class="form-input">
+                      <input
+                        type="text"
+                        id="start-date"
+                        placeholder="DD/MM/YYYY"
+                      />
+                      <i class="fa-solid fa-calendar"></i>
+                    </div>
+                    <label for="end-date">End Date</label>
+                    <div class="form-input">
+                      <input
+                        type="text"
+                        id="end-date"
+                        placeholder="DD/MM/YYYY"
+                      />
+                      <i class="fa-solid fa-calendar"></i>
+                    </div>
+                    <label>Format Type</label>
+                    <div class="format">
+                      <input type="checkbox" id="csv" />
+                      <label for="csv">.csv</label>
+                      <input type="checkbox" id="pdf" />
+                      <label for="pdf">.pdf</label>
+                    </div>
+                    <button>Download</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <img src="./images/chat.png" alt="" class="chat-img" />
+    </section>
+    <script src="app.js"></script>
+  </body>
+</html>
